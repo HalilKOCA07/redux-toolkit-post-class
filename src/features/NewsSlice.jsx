@@ -13,8 +13,8 @@ export const getNews = createAsyncThunk(
         const API_KEY = "c4e7f9397dde4d95ab9f77a573758d80"
         const url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`
         const res = await axios(url)
-        console.log(res.data)
-        return res.data
+        console.log(res.data.articles)
+        return res.data.articles
     }
 )
 const NewsSlice = createSlice({
